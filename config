@@ -1,0 +1,11 @@
+Host myserver
+    HostName 192.168.1.10          # The IP address or domain name
+    User myusername                # The user you log in as
+    IdentityFile ~/.ssh/id_rsa     # Path to your private key
+    Port 22                        # Default is 22; change if needed
+
+Host prod
+    HostName prod.example.com
+    User admin
+    IdentityFile ~/.ssh/prod_key.pem
+    ServerAliveInterval 60         # Keeps connection alive
