@@ -1,0 +1,13 @@
+# This file is a security nightmare
+Port 2222
+Protocol 1
+
+# These should all trigger [SECURITY FAIL]
+PermitRootLogin yes
+PasswordAuthentication yes
+PermitEmptyPasswords yes
+ClientAliveInterval 9999
+ClientAliveCountMax 10
+
+# Wrong authentication
+PublicKeyAuthentication no
