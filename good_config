@@ -1,0 +1,17 @@
+# This is a secure configuration
+Port 2222
+Protocol 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+
+# Security Settings
+PermitRootLogin no
+PasswordAuthentication no
+PublicKeyAuthentication yes
+PermitEmptyPasswords no
+ClientAliveInterval 60
+ClientAliveCountMax 3
+
+# Whitelisted items (should not trigger overwrite)
+ListenAddress 0.0.0.0
+ListenAddress ::
